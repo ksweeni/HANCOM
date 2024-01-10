@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>HANCOM - REGISTER</title>
+	<style>
+		body {
+			background-image: url("../static/image/login-background.png");
+		}
+
+
+
+		#container {
+			box-shadow: 4px 1px 5px gray;
+			background-color: #FBFBFB;
+			border-radius: 5px;
+		}
+
+		#wrapper-container {
+
+			display: flex;
+			flex-direction: row;
+			justify-content: space-around;
+			align-items: center;
+		}
+
+		#wrapper-box {
+			margin-bottom: 10px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			width: 300px;
+			border-radius: 5px;
+			background-color: gray;
+			box-shadow: inset 2px 1px 5px black;
+			height: 200px;
+		}
+
+		#login-button {
+			border-radius: 5px;
+			background-color: lightgray;
+		}
+
+		#register-wrapper {
+			display: flex;
+			align-items: center;
+			flex-direction: row;
+			margin-right: 30px;
+			margin-bottom: 30px;
+		}
+
+		form {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: row;
+		}
+
+		input {
+			background-color: #DBDBDB;
+			border-radius: 5px;
+		}
+
+		#submit {
+			width: 100px;
+			border-radius: 50px;
+			border: 5px solid gray;
+			height: 100px;
+		}
+
+		#register-form {
+			margin-right: 20px;
+			display: flex;
+			flex-direction: column;
+			align-content: center;
+			justify-content: center;
+			align-items: flex-start;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="container">
+		<div id="sub-container">
+			<h1>회원가입 화면</h1>
+			<div id="wrapper-container">
+				<div id="login-wrapper">
+					<div id="wrapper-box">
+						<p id="registrationMessage"></p>
+						로그인을 통해 한컴타자를 즐겨보세요
+						수많은 친구들이
+						당신을 기다리고 있습니다
+						<button id="login-button" onclick="location.href='Login.html';">로그인하기</button>
+					</div>
+				</div>
+				<div id="register-wrapper">
+					<form action="registerCheck">
+						<div id="register-form">
+							닉네임 <input type="text" name="nickname" placeholder="닉네임">
+							이름 <input type="text" name="name" placeholder="이름">
+							비밀번호 <input type="password" name="password" placeholder="비밀번호">
+							학교 <input type="text" name="university" placeholder="없을 시 일반/풀 대학 네임 기재">
+							목표타수<input type="number" name="goal" placeholder="목표 타수">
+							현재타수<input type="number" name="typing" placeholder="없을 시 0 기재">
+						</div>
+						<div id="button-wrapper">
+							<button id="submit" type="submit">가입하기</button>
+						</div>
+
+
+					</form>
+
+
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+	<script>
+		// Retrieve the registration status from the request attributes
+		var registrationStatus = '<%= request.getAttribute("registrationStatus") %>';
+
+		// Check if the registration was successful
+		if (registrationStatus === "success") {
+			// Get the elements inside the wrapper-box div
+			var wrapperBox = document.getElementById("wrapper-box");
+			var registrationMessage = document.getElementById("registrationMessage");
+			var loginButton = document.getElementById("login-button");
+
+			// Change the text content of the elements
+			registrationMessage.textContent = "회원가입이 완료되었습니다.";
+			loginButton.textContent = "로그인하기";
+		}
+		// Check if the registration failed
+		else if (registrationStatus === "failure") {
+			// Get the message div element
+			var registrationMessage = document.getElementById("registrationMessage");
+
+			// Retrieve the message from the request attributes
+			var message = '<%= request.getAttribute("registrationFailedMessage") %>';
+
+			// Set the text content of the message div element to the message
+			registrationMessage.textContent = message;
+		}
+	</script>
+
+
+</body>
+
+</html>

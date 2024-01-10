@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>HANCOM</title>
+	<link rel="stylesheet" type="text/css" href="../static/css/style.css">
+	<link rel="stylesheet" type="text/css" href="../static/css/setting.css">
+	<style>
+		#user-quit-wrapper-input {
+			display: flex;
+			font-size: 20px;
+			background-color: lightslategrey;
+
+			color: white;
+			width: 800px;
+			height: 150px;
+			margin-right: 10px;
+			box-shadow: inset 2px 3px 5px black;
+			border-radius: 10px;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+		}
+
+		#quit-input-tag {
+			background-color: transparent;
+			width: 300px;
+			color: white;
+			height: 20px;
+			font-size: 20px;
+			border-color: antiquewhite;
+			margin-left: 5px;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="container-setting">
+		<h1 id="title"><span id="hancom-title">회원 탈퇴</span></h1>
+
+		<div id="sub-container-setting">
+			<div id="type-container-col">
+
+				<div id="top-div">
+					<div id="user-setting-ground">
+						<span id="windows">Windows US</span>
+					</div>
+					<div id="user-setting-list">
+						<p id="user-p-tag">유저이름:박원빈</p>
+						<p id="user-p-tag">닉네임:원빈</p>
+						<p id="user-p-tag">현재타수:500</p>
+						<p id="user-p-tag">학교:서울대학교</p>
+						<p id="user-p-tag">레벨:SILVER</p>
+					</div>
+					<div id="user-typing">
+						<div id="user-profile">
+							<img id="user-setting-img" src="../static/image/typing-boy.png">
+						</div>
+					</div>
+				</div>
+
+
+				<div id="user-new-setting-list">
+					<div id="user-new-setting-wrapper">
+						<div id="user-quit-wrapper-input">
+							<span>회원 탈퇴 확인을 위해, 닉네임을 입력해주세요 </span>
+
+							<p>닉네임:<input id="quit-input-tag" type="text"></p>
+
+						</div>
+
+					</div>
+					<button id="finish-setting">즐거웠어요</button>
+				</div>
+
+
+			</div>
+
+
+		</div>
+	</div>
+
+</body>
+
+</html>

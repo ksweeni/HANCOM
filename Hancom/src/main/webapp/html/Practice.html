@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>HANCOM TAJA</title>
+	<style>
+		@font-face {
+			font-family: 'ef_chuckchuck';
+			src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-01@1.0/ef_chuckchuck.woff2') format('woff2');
+			font-weight: normal;
+			font-style: normal;
+		}
+
+		@font-face {
+			font-family: 'KorailRoundGothicBold';
+			src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2212@1.0/KorailRoundGothicBold.woff2') format('woff2');
+			font-weight: normal;
+			font-style: normal;
+		}
+
+		@font-face {
+			font-family: 'Chosunilbo_myungjo';
+			src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff') format('woff');
+			font-weight: normal;
+			font-style: normal;
+		}
+
+		@font-face {
+			font-family: 'HCRDotum';
+			src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.0/HCRDotum.woff') format('woff');
+			font-weight: normal;
+			font-style: normal;
+		}
+
+		body {
+			background-image: url("../static/image/background-tree.png");
+		}
+
+		* {
+
+
+			/*font-family: 'ef_chuckchuck';*/
+			font-family: '굴림';
+
+
+			font-weight: 100;
+		}
+
+		@font-face {
+			font-family: 'NeoDunggeunmoPro-Regular';
+			src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/NeoDunggeunmoPro-Regular.woff2') format('woff2');
+			font-weight: normal;
+			font-style: normal;
+		}
+
+
+
+		#sub-container {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-evenly;
+			align-items: center;
+		}
+
+		#welcome-conatiner {
+			background-color: #043F36;
+			color: white;
+			border-radius: 5px;
+			box-shadow: inset 3px 2px 3px 0px black;
+		}
+
+
+		#describe-container {
+			background-image: url("../static/image/typing.png");
+			background-size: cover;
+			width: 400px;
+			height: 400px;
+			border-radius: 10px;
+			font-weight: bolder;
+			box-shadow: inset 4px 3px 6px 1px #060606;
+
+		}
+
+		#button-container {
+			display: flex;
+			flex-direction: column;
+		}
+
+		button {
+			width: 300px;
+			height: 45px;
+			display: flex;
+			margin-bottom: 50px; /*여기 마진 다름*/
+			background-color: transparent;
+			font-size: 30px;
+			border: none;
+			font-weight: bold;
+			color: white;
+			text-shadow: 1px -1px 3px black;
+			flex-direction: row;
+
+			justify-content: center;
+			align-items: center;
+		}
+
+		button:hover {
+			color: yellow;
+
+		}
+
+		h1 {
+			font-family: 'HCRDotum';
+			font-size: 25px;
+			display: flex;
+			justify-content: center;
+			color: #8D7555;
+			text-shadow: 0px -1px 0px grey;
+		}
+
+		#user-welcome {
+			font-family: 'NeoDunggeunmoPro-Regular';
+			margin-left: 10px;
+			display: flex;
+			justify-content: center;
+		}
+
+		p {
+			margin-left: 10px;
+		}
+
+		img {
+			width: 40px;
+			height: 40px;
+			border-radius: 30px;
+			box-shadow: 2px 3px 2px 1px black;
+		}
+
+		#hancom-title {
+
+			font-family: '굴림';
+			color: white;
+			font-weight: bold;
+			font-size: 50px;
+			text-shadow: 3px 3px 4px black;
+		}
+
+		#describe {
+			margin-left: 10px;
+			font-weight: bold;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div id="container">
+		<h1 id="title"> 한글과 컴퓨터 <span id="hancom-title">타자연습</span></h1>
+		<div id="welcome-conatiner">
+			<p id="user-welcome">user님, 개인 연습을 위해 카테고리를 골라주세요.</p>
+		</div>
+		<div id="sub-container">
+			<div id="button-container">
+
+				<button id="lyrics-button"><img id="lyrics" src="../static/image/personal.png">
+					<p>음 악</p>
+				</button>
+				<button id="words-button"><img id="words" src="../static/image/group.png">
+					<p>단 어</p>
+				</button>
+				<button id="advice-button"><img id="advice" src="../static/image/create.png">
+					<p>명 언</p>
+				</button>
+			</div>
+			<div id="describe-container">
+				<p id="describe">가사 연습을 통해 실력을 업데이트 합니다.</p>
+			</div>
+		</div>
+	</div>
+	<script>
+		// 버튼 요소들을 가져옵니다.
+		var lyricsButton = document.getElementById("lyrics-button");
+		var wordsButton = document.getElementById("words-button");
+		var adviceButton = document.getElementById("advice-button");
+
+		// 클릭한 버튼에 해당하는 문구를 표시하는 함수
+		function displayText(text) {
+			var describe = document.getElementById("describe");
+			describe.textContent = text;
+		}
+		
+		lyricsButton.addEventListener("click", function () {
+			displayText("가사 연습을 통해 실력을 업데이트 합니다.");
+		});
+		wordsButton.addEventListener("click", function () {
+			displayText("단어 연습을 통해 실력을 업데이트 합니다.");
+		});
+		adviceButton.addEventListener("click", function () {
+			displayText("명언 연습을 통해 실력을 업데이트 합니다.");
+		});
+
+		
+	</script>
+
+
+</body>
+
+</html>

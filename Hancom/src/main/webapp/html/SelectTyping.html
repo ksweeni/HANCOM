@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>HANCOM</title>
+	<style>
+		@font-face {
+			font-family: 'ef_chuckchuck';
+			src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-01@1.0/ef_chuckchuck.woff2') format('woff2');
+			font-weight: normal;
+			font-style: normal;
+		}
+
+		@font-face {
+			font-family: 'KorailRoundGothicBold';
+			src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2212@1.0/KorailRoundGothicBold.woff2') format('woff2');
+			font-weight: normal;
+			font-style: normal;
+		}
+
+		@font-face {
+			font-family: 'Chosunilbo_myungjo';
+			src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff') format('woff');
+			font-weight: normal;
+			font-style: normal;
+		}
+
+		@font-face {
+			font-family: 'HCRDotum';
+			src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.0/HCRDotum.woff') format('woff');
+			font-weight: normal;
+			font-style: normal;
+		}
+
+		body {
+			background-image: url("../static/image/background-tree.png");
+		}
+
+		* {
+
+
+			font-family: 'NeoDunggeunmoPro-Regular';
+
+			font-weight: 100;
+		}
+
+		@font-face {
+			font-family: 'NeoDunggeunmoPro-Regular';
+			src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/NeoDunggeunmoPro-Regular.woff2') format('woff2');
+			font-weight: normal;
+			font-style: normal;
+		}
+
+
+
+		#sub-container {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-evenly;
+			align-items: center;
+		}
+
+		#welcome-container {
+			background-color: #043F36;
+			color: white;
+			border-radius: 5px;
+			box-shadow: inset 3px 2px 3px 0px black;
+		}
+
+
+
+		button:hover {
+			color: yellow;
+
+		}
+
+		h1 {
+			font-family: 'NeoDunggeunmoPro-Regular';
+			font-size: 25px;
+			display: flex;
+			justify-content: center;
+			color: #8D7555;
+			text-shadow: 0px -1px 0px grey;
+		}
+
+		#user-welcome {
+			font-family: 'NeoDunggeunmoPro-Regular';
+			margin-left: 10px;
+			display: flex;
+			justify-content: center;
+		}
+
+		p {
+			margin-left: 10px;
+			margin-right: 10px;
+		}
+
+
+		#hancom-title {
+			font-family: 'NeoDunggeunmoPro-Regular';
+			color: white;
+			font-weight: bold;
+			font-size: 50px;
+			text-shadow: -1px -1px 1px black;
+		}
+
+		#describe {
+			margin-left: 10px;
+			font-weight: bold;
+			font-family: 'NeoDunggeunmoPro-Regular';
+		}
+
+		#category-wrapper {
+			background-color: #043F36;
+			color: white;
+			border-radius: 5px;
+			box-shadow: inset 3px 2px 3px 0px black;
+			width: fit-content;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		#category-title {
+			margin-left: 10px;
+			margin-right: 10px;
+		}
+
+		#category-container {
+			display: flex;
+			width: 400px;
+			height: 340px;
+			border-radius: 10px;
+			box-shadow: inset -1px -1px 3px 0px black;
+			flex-direction: column;
+			align-items: center;
+			justify-content: space-evenly;
+			background-color: #AD846B;
+		}
+
+		#category-list {
+			background-color: #043F36;
+			margin: 10px;
+			border-radius: 10px;
+			width: 300px;
+			color: white;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			box-shadow: inset 4px 4px 7px black;
+		}
+
+		#category-list p:hover {
+			color: yellow;
+			background-color: orangered;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div id="container">
+		<h1 id="title"> 한글과 컴퓨터 <span id="hancom-title">타자연습</span></h1>
+		<div id="welcome-container">
+			<p id="user-welcome">user님, 개인 연습을 위해 카테고리를 골라주세요.</p>
+		</div>
+		<div id="sub-container">
+			<div id="category-container">
+				<div id="category-wrapper">
+					<p id="category-title">가사 선택</p>
+				</div>
+				<div id="category-list"> 
+					<!-- /* 5 개 까지만 */-->
+					<p>뉴진스-어텐션</p>
+					<p>뉴진스-어텐션</p>
+					<p>뉴진스-어텐션</p>
+					<p>뉴진스-어텐션</p>
+					<p>뉴진스-어텐션</p>
+					
+				</div>
+			</div>
+
+
+		</div>
+	</div>
+
+
+</body>
+
+</html>
