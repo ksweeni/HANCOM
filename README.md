@@ -36,13 +36,13 @@
 # 🖥️ 트리거 사용
 ### 🔨 UPD_TEAM_MEMBER_ON_NICK_CHANGE, UPD_TEAM_OWNER_ON_NICK_CHANGE
 LOGIN 테이블의 NICKNAME이 업데이트 되면 TEAM 테이블의 TEAM_MEMBER, OWNER를 업데이트
-### 🔨DELETE_MEMBER_INFO
+### 🔨 DELETE_MEMBER_INFO
 LOGIN 테이블의 튜플이 삭제될 때 관련된 정보를 TEAM 및 CATEGORY 테이블에서 삭제
-### 🔨SET_USER_LEVEL
+### 🔨 SET_USER_LEVEL
 사용자 레벨을 BRONZE, SILVER, GOLD로 설정
-### 🔨CHECK_CATEGORY_EXISTENCE
+### 🔨 CHECK_CATEGORY_EXISTENCE
 새로운 레코드의 카테고리 정보가 CATEGORY 테이블에 존재하는지 확인
-### 🔨ASSIGN_TEAM_ID
+### 🔨 ASSIGN_TEAM_ID
 팀 데이터가 삽입될 때 TEAM_ID를 할당
 
 <br/>
